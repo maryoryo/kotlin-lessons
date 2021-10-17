@@ -340,13 +340,65 @@
 // }
 
 
+// fun main(args: Array<String>) {
+//   // val users: Map<String, Int> = mapOf("taguchi" to 40, "fkoji" to 80, "dotinstall" to 60)
+//   val users = mutableMapOf("taguchi" to 40, "fkoji" to 80, "dotinstall" to 60)
+//   // println(users["taguchi"])
+//   users["taguchi"] = 55
+//   println(users.size)
+//   println(users.keys)
+//   println(users.values)
+//   println(users.entries)
+// }
+
+
+// fun main(args: Array<String>) {
+//   val prices = listOf(53.2, 48.2, 32.8)
+//   // prices.map {n -> n * 1.08}
+//   prices
+//     // .map {n -> n * 1.08}
+//     .map {it * 1.08}
+//     .filter {it > 50}
+//     .forEach {println(it)}
+// }
+
+
+
+// class MyException(message: String): Throwable(message)
+
+// fun div(a: Int, b: Int) {
+//   try {
+//     if (b < 0) {
+//       throw MyException("not minus!")
+//     }
+//     println(a / b)
+//   } catch (e: ArithmeticException) {
+//     println(e.message)
+//   } catch (e: MyException) {
+//     println(e.message)
+//   } finally {
+//     println("-- end --")
+//   }
+// }
+
+// fun main(args: Array<String>) {
+//   div(3, 0)
+//   div(3, -3)
+// }
+
+
 fun main(args: Array<String>) {
-  // val users: Map<String, Int> = mapOf("taguchi" to 40, "fkoji" to 80, "dotinstall" to 60)
-  val users = mutableMapOf("taguchi" to 40, "fkoji" to 80, "dotinstall" to 60)
-  // println(users["taguchi"])
-  users["taguchi"] = 55
-  println(users.size)
-  println(users.keys)
-  println(users.values)
-  println(users.entries)
+  // val s: String = null
+  val s: String? = null
+  println(s)
+
+  // if (s != null) {
+  //   println(s.length)
+  // } else {
+  //   println(null)
+  // }
+  // println(s?.length)
+  // println(s?.length ?: -1)
+  println(s?.length ?: "aaaa")
+  println(s!!.length)
 }
